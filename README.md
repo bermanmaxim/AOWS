@@ -9,7 +9,7 @@
 ### Latency model
 _main file: `latency.py`_
 
-_depends on: PyTorch, [CVXPY](https://www.cvxpy.org/), matplotlib, numpy, [numba](http://numba.pydata.org/), scipy, [torch2trt](https://github.com/NVIDIA-AI-IOT/torch2trt/tree/e22844a449a880123435fce7e6444f1516ebbe60)_
+_depends on: [PyTorch](http://pytorch.org/), [CVXPY](https://www.cvxpy.org/), matplotlib, numpy, [numba](http://numba.pydata.org/), scipy, [torch2trt](https://github.com/NVIDIA-AI-IOT/torch2trt/tree/e22844a449a880123435fce7e6444f1516ebbe60)_
 
 
 * Generate training and validation samples
@@ -39,7 +39,7 @@ python latency.py benchmark --device trt --dtype fp16 \
 ### Network width search
 _main file: `train_nas.py`_
 
-_depends on: mxnet, numpy, numba_
+_depends on: [PyTorch](http://pytorch.org/), numpy, [numba](http://numba.pydata.org/)_
 * **Train a slimmable network and select a configuration with OWS.** See `-h` for optimization options.
 ```Shell
 python train_nas.py --data /imagenet --latency-target 0.04 \
