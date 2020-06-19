@@ -145,7 +145,7 @@ def gen_configuration_biased(net, repetitions):
         pairwise.append(P)
     unary.append(np.zeros(len(output_choices)))
     un, pair, states = complete(unary, pairwise)
-    iconfig = maxsum(un, pair, states, K=1)[1]
+    iconfig = maxsum(un, pair, states)[1]
     configuration = [C[i] for (C, i) in zip(net.configurations, iconfig[1:-1])]
     return configuration
 
